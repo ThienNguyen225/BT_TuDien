@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển từ ký tự</title>
+</head>
+<body>
+<input id="TimKiem" type="text" >
+<button id="subMit" onclick="search()">Search</button>
+    <script>
+        function search() {
+            var arrEng = ["banana","apple","citrus","pomegranates","mango"];
+            var arrVie = ["Trái Chuối","Trái Táo","Trái Chanh","Trái Lựu","Trái Xoài"];
+            var nhap = document.getElementById('TimKiem').value;
+            var flag = false;
+            for(i=0; i<arrEng.length ; i++){
+                if(arrEng[i] == nhap){
+                    alert(arrVie[i]);
+                    document.getElementById('TimKiem').value = arrVie[i];
+                    flag = true;
+                }
+            }
+            if(!flag){
+                alert('Khong co tu do trong danh sach !');
+            }
+        }
+
+    </script>
+</body>
+</html>
